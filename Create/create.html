@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Hokie Banking</title>
     <link rel="stylesheet" type="text/css" href="reset.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <img src="hokiebanking-logo.png" alt="Logo" width="500" height="400">
     <div class="container">
       <header>
         <div class="wrapper">
-          <h1>Welcome Hokies</h1>
+          <h1>You are almost a hokie banker!</h1>
           <table id="table1">
             <tr>
               <td>Last Name:</td>
@@ -25,16 +24,26 @@
               <td><div id="errFirst"></div></td>
             </tr>
             <tr>
-              <td>Customer ID:</td>
+                <td>First Name:</td>
+                <td><input type="text" id="first" onkeyup="validate();" /></td>
+                <td><div id="errFirst"></div></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+            </tr>
+            <tr>
+              <td>Street Number:</td>
               <td><input type="text" id="last" onkeyup="validate();"/></td>
               <td><div id="errLast"></div></td>
             </tr>
-          </table>
-          <div class="buttonBox" id="login">
-            <a class="myButton" href="#projects">LogIn</a>
-          </div>
-          <div class="buttonBox" id="create">
-            <a class="myButton" href="./Create/create.html">Create Account</a>
+            <tr>
+                <td>Street Name:</td>
+                <td><input type="text" id="last" onkeyup="validate();"/></td>
+                <td><div id="errLast"></div></td>
+              </tr>
+        </table>
+          <div class="buttonBox" id>
+            <a class="myButton" href="#projects">Create Account</a>
           </div>
         </div>
       </header>
