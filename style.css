@@ -8,14 +8,14 @@ html {
     margin: 0;
   }
   header, footer {
-    background-color: #000000;
+    background-color: #772e25;
     text-align: center;
   /*  min-width: 500px; */
   }
   
   header {
     font-family: 'Roboto', serif;
-    color: #ccff33;
+    color: #ffffff;
   
     min-height: 50vh;
     display: flex;
@@ -78,9 +78,9 @@ html {
   
   .myButton {
     border-radius: 28px;
-    border: 1px solid #ccff33;
+    border: 1px solid #ffffff;
     cursor: pointer;
-    color: #ccff33;
+    color: #ffffff;
     font-size: 20px;
     padding: 16px 31px;
     text-decoration: none;
@@ -88,7 +88,7 @@ html {
   }
   
   .myButton:hover {
-      background-color:#a5be00;
+      background-color:#000000;
   }
   
   .myButton:active {
