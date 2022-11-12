@@ -65,7 +65,7 @@ html {
   }
   
   .bio {
-    color: #ccff33;
+    color: #ffffff;
     font-size: 24px;
     font-family: 'Roboto', serif;
   }
@@ -74,6 +74,21 @@ html {
     display: flex;
     justify-content: center;
     align-content: center;
+  }
+
+  .exitButton{
+    border-radius: 28px;
+    border: 1px solid #772e25;
+    cursor: pointer;
+    color: #000000;
+    font-size: 20px;
+    padding: 16px 31px;
+    text-decoration: none;
+    margin: 1.69em auto;
+  }
+
+  .exitButton:hover{
+    background-color: #772e25;
   }
   
   .myButton {
@@ -96,7 +111,7 @@ html {
       top:1px;
   }
   
-  .recipe {
+  .label {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
     width: 100%;
   }
