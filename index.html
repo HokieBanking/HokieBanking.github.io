@@ -1,81 +1,38 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Hokie Banking</title>
-  <script type="text/javascript">
-    var divs = new Array();
-    divs[0] = "errFirst";
-    divs[1] = "errLast";
-    divs[3] = "errUid";
-    divs[5] = "errConfirm";
-    function validate()
-	{
-      var inputs = new Array();
-      inputs[0] = document.getElementById('first').value;
-      inputs[1] = document.getElementById('last').value;
-      inputs[3] = document.getElementById('uid').value;
-      inputs[5] = document.getElementById('confirm').value;
-      var errors = new Array();
-      errors[0] = "<span style='color:red'>Please enter your first name!</span>";
-      errors[1] = "<span style='color:red'>Please enter your last name!</span>";
-      for (i in inputs)
-      {
-        var errMessage = errors[i];
-        var div = divs[i];
-        if (inputs[i] == "")
-        	document.getElementById(div).innerHTML = errMessage;
-        else if (i==2)
-        {
-          var atpos=inputs[i].indexOf("@");
-          var dotpos=inputs[i].lastIndexOf(".");
-          if (atpos<1 || dotpos<atpos+2 || dotpos+2>=inputs[i].length)
-        	document.getElementById('errEmail').innerHTML = "<span style='color: red'>Enter a valid email address!</span>";
-          else
-        	document.getElementById(div).innerHTML = "OK!";
-        }
-        else if (i==5)
-        {
-          var first = document.getElementById('password').value;
-          var second = document.getElementById('confirm').value;
-          if (second != first)
-        	document.getElementById('errConfirm').innerHTML = "<span style='color: red'>Your passwords don't match!</span>";
-          else
-       		document.getElementById(div).innerHTML = "OK!";
-        }
-        else
-        	document.getElementById(div).innerHTML = "OK!";
-       }
-     }
-        function finalValidate()
-        {
-          var count = 0;
-          for(i=0;i<6;i++)
-          {
-            var div = divs[i];
-            if(document.getElementById(div).innerHTML == "OK!")
-            count = count + 1;
-          }
-          if(count == 6)
-          	document.getElementById("errFinal").innerHTML = "All the data you entered is correct!!!";
-        }
-   </script>
-   <img src="hokiebanking-logo.png" alt="App Logo" class="center">
-</head>
-<body>
-	<table id="table1">
-      <tr>
-        <td>First Name:</td>
-        <td><input type="text" id="first" onkeyup="validate();" /></td>
-        <td><div id="errFirst"></div></td>
-      </tr>
-      <tr>
-        <td>Last Name:</td>
-        <td><input type="text" id="last" onkeyup="validate();"/></td>
-        <td><div id="errLast"></div></td>
-      </tr>
-      <tr>
-        <td><input type="button" id="Log In" value="Log In" onclick="validate();finalValidate();"/></td>
-        <td><div id="errFinal"></div></td>
-      </tr>
-	</table>
-</body>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hokie Banking</title>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <img src="hokiebanking-logo.png" alt="Logo" width="500" height="400">
+    <div class="container">
+      <header>
+        <div class="wrapper">
+          <h1>Welcome Hokies</h1>
+          <table id="table1">
+            <tr>
+              <td>First Name:</td>
+              <td><input type="text" id="first" onkeyup="validate();" /></td>
+              <td><div id="errFirst"></div></td>
+            </tr>
+            <tr>
+              <td>Last Name:</td>
+              <td><input type="text" id="last" onkeyup="validate();"/></td>
+              <td><div id="errLast"></div></td>
+            </tr>
+          </table>
+          <div class="buttonBox">
+            <a class="myButton" href="#projects">LogIn</a>
+          </div>
+        </div>
+      </header>
 </html>
